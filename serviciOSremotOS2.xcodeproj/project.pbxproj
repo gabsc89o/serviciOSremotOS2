@@ -15,6 +15,10 @@
 		AA69AC6620922FCF008066D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA69AC6520922FCF008066D7 /* main.m */; };
 		AA69AC7020922FCF008066D7 /* serviciOSremotOS2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA69AC6F20922FCF008066D7 /* serviciOSremotOS2Tests.m */; };
 		AA69AC7B20922FCF008066D7 /* serviciOSremotOS2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA69AC7A20922FCF008066D7 /* serviciOSremotOS2UITests.m */; };
+		AA69AC8A20923635008066D7 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = AA69AC8920923635008066D7 /* ViewController2.m */; };
+		AA69AC8D209238A3008066D7 /* Tabla.m in Sources */ = {isa = PBXBuildFile; fileRef = AA69AC8C209238A3008066D7 /* Tabla.m */; };
+		AA69AC90209238BB008066D7 /* Objeto.m in Sources */ = {isa = PBXBuildFile; fileRef = AA69AC8F209238BB008066D7 /* Objeto.m */; };
+		AA69AC932092395A008066D7 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = AA69AC922092395A008066D7 /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		AA69AC7620922FCF008066D7 /* serviciOSremotOS2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = serviciOSremotOS2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA69AC7A20922FCF008066D7 /* serviciOSremotOS2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = serviciOSremotOS2UITests.m; sourceTree = "<group>"; };
 		AA69AC7C20922FCF008066D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA69AC8820923635008066D7 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		AA69AC8920923635008066D7 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		AA69AC8B209238A3008066D7 /* Tabla.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tabla.h; sourceTree = "<group>"; };
+		AA69AC8C209238A3008066D7 /* Tabla.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tabla.m; sourceTree = "<group>"; };
+		AA69AC8E209238BB008066D7 /* Objeto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Objeto.h; sourceTree = "<group>"; };
+		AA69AC8F209238BB008066D7 /* Objeto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objeto.m; sourceTree = "<group>"; };
+		AA69AC912092395A008066D7 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		AA69AC922092395A008066D7 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +122,14 @@
 				AA69AC6120922FCF008066D7 /* LaunchScreen.storyboard */,
 				AA69AC6420922FCF008066D7 /* Info.plist */,
 				AA69AC6520922FCF008066D7 /* main.m */,
+				AA69AC8820923635008066D7 /* ViewController2.h */,
+				AA69AC8920923635008066D7 /* ViewController2.m */,
+				AA69AC8B209238A3008066D7 /* Tabla.h */,
+				AA69AC8C209238A3008066D7 /* Tabla.m */,
+				AA69AC8E209238BB008066D7 /* Objeto.h */,
+				AA69AC8F209238BB008066D7 /* Objeto.m */,
+				AA69AC912092395A008066D7 /* Test.h */,
+				AA69AC922092395A008066D7 /* Test.m */,
 			);
 			path = serviciOSremotOS2;
 			sourceTree = "<group>";
@@ -263,8 +283,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA69AC5B20922FCD008066D7 /* ViewController.m in Sources */,
+				AA69AC8A20923635008066D7 /* ViewController2.m in Sources */,
 				AA69AC6620922FCF008066D7 /* main.m in Sources */,
 				AA69AC5820922FCD008066D7 /* AppDelegate.m in Sources */,
+				AA69AC932092395A008066D7 /* Test.m in Sources */,
+				AA69AC90209238BB008066D7 /* Objeto.m in Sources */,
+				AA69AC8D209238A3008066D7 /* Tabla.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "Objeto.h"
+#import "Tabla.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSURL *url = [NSURL URLWithString:@"https://jsonplaceholder.typicode.com/posts"];
+    NSError *error;
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data,NSError *connectionError){
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSDictionary *d = (NSDictionary *)[array objectAtIndex:5];
+        
+        Objeto *cp = [_pruebas objectAtIndex:5];
+        NSString *str = [NSString stringWithFormat: @"%@", cp.body];
+        [[celda textLabel]setText:str];
+        NSLog(@"%@",[d objectForKey:@"title"]);
+        
+       // [_texto setText:[d objectForKey:@"body"]];
+    }];
 }
 
 
@@ -25,5 +40,6 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction) volverAControladorX:(UIStoryboardSegue *)segue{ }
 
 @end

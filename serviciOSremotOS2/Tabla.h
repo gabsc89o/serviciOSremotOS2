@@ -1,22 +1,19 @@
 //
-//  ViewController.h
+//  Tabla.h
 //  serviciOSremotOS2
 //
 //  Created by user138066 on 4/26/18.
 //  Copyright © 2018 user138066. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "Tabla.h"
+#import "Objeto.h"
 
-@interface ViewController : UIViewController
+@interface Tabla : NSObject
 
-{
-    Tabla *_tablaDS;
-    
-}
+@property NSArray *pruebas;
 
-@property IBOutlet UITableView *table;
+-(Objeto *)pruebaAt:(NSInteger)pos;
 
 @end
-
