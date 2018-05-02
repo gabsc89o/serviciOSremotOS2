@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "Objeto.h"
 
-@interface Tabla : NSObject
+@interface Tabla : NSObject<UITableViewDataSource>
 
-@property NSArray *pruebas;
+@property NSArray *elementos;
 
--(Objeto *)pruebaAt:(NSInteger)pos;
+-(NSObject *)objectAt:(NSInteger)pos;
 
 @end

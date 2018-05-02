@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Objeto.h"
 
 @interface ViewController2 : UIViewController
 
-@property IBOutlet UITextField *userid;
-@property IBOutlet UITextField *title;
-@property IBOutlet UITextField *body;
+@property Objeto *postSeleccionado;
+
+@property IBOutlet UITextField *tfuserid;
+@property IBOutlet UITextField *tftitle;
+@property IBOutlet UITextField *tfbody;
 
 @end

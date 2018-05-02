@@ -107,9 +107,9 @@
                         <viewLayoutGuide key="safeArea" id="Kss-Rf-sb9"/>
                     </view>
                     <connections>
-                        <outlet property="body" destination="37g-3d-f6P" id="CYw-Mp-HBo"/>
-                        <outlet property="title" destination="pPu-26-cSw" id="mAg-Sx-AER"/>
-                        <outlet property="userid" destination="M9N-ZI-nET" id="FhG-J9-OU5"/>
+                        <outlet property="tfbody" destination="37g-3d-f6P" id="SyH-Xk-dyp"/>
+                        <outlet property="tftitle" destination="pPu-26-cSw" id="7Js-CH-dCW"/>
+                        <outlet property="tfuserid" destination="M9N-ZI-nET" id="hfE-BW-dU0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLI-Se-udm" userLabel="First Responder" sceneMemberID="firstResponder"/>

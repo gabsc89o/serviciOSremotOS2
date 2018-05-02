@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "ViewController2.h"
 #import "Objeto.h"
+#import "Test.h"
 #import "Tabla.h"
+
 @interface ViewController ()
 
 @end
@@ -18,28 +21,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSURL *url = [NSURL URLWithString:@"https://jsonplaceholder.typicode.com/posts"];
-    NSError *error;
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data,NSError *connectionError){
-        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSDictionary *d = (NSDictionary *)[array objectAtIndex:5];
-        
-        Objeto *cp = [_pruebas objectAtIndex:5];
-        NSString *str = [NSString stringWithFormat: @"%@", cp.body];
-        [[celda textLabel]setText:str];
-        NSLog(@"%@",[d objectForKey:@"title"]);
-        
-       // [_texto setText:[d objectForKey:@"body"]];
-    }];
+    tablaDS = [[Tabla alloc]init];
+    [ _table setDataSource:tablaDS];
+    [ _table setDelegate:self];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    Test *sp = [Test instancia];
+    NSArray *posts = [sp listarPost];
+    [tablaDS setElementos:posts];
+    [_table reloadData];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    Objeto *o = (Objeto *)[tablaDS objectAt:[indexPath row]];
+    [self performSegueWithIdentifier:@"verMostrarPost" sender:o];
+}
 -(IBAction) volverAControladorX:(UIStoryboardSegue *)segue{ }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"vermostrarPost"]) {
+        
+        if ([sender isKindOfClass:[Objeto class]]) {
+            ViewController2 *vc = (ViewController2 *)[segue destinationViewController];
+            [vc setPostSeleccionado:(Objeto *)sender];
+        }
+    }
+}
 @end

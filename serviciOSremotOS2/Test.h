@@ -10,4 +10,7 @@
 
 @interface Test : NSObject
 
++(Test *)instancia;
+-(NSArray *)listarPost;
+
 @end
