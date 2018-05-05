@@ -28,7 +28,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     if (_postSeleccionado != nil) {
-        _tfuserid.text = [NSString stringWithFormat:@"%@", _postSeleccionado.userid];
+        _tfuserid.text = [NSString stringWithFormat:@"%d", _postSeleccionado.userid];
         _tftitle.text = _postSeleccionado.title;
         _tfbody.text = _postSeleccionado.body;
     }

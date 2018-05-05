@@ -45,7 +45,7 @@
 -(IBAction) volverAControladorX:(UIStoryboardSegue *)segue{ }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"vermostrarPost"]) {
+    if ([[segue identifier] isEqualToString:@"verMostrarPost"]) {
         
         if ([sender isKindOfClass:[Objeto class]]) {
             ViewController2 *vc = (ViewController2 *)[segue destinationViewController];
