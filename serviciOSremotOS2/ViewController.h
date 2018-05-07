@@ -17,6 +17,7 @@
 }
 
 @property IBOutlet UITableView *table;
+@property IBOutlet UITextField *tftext;
 
 @end
 
